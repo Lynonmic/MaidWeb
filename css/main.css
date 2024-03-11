@@ -144,24 +144,13 @@ button {
 {
   order: 1;
   font-weight: 400;
-  transform: translateY(270px) translateX(160px);
+  transform: translateY(230px) translateX(160px);
 }
 .heading:nth-child(odd)
 { 
   transform: translateX(600px);
 }
-@media (min-width: 62em)
-{
-  .heading{
-    text-align: initial;
-  }
-  .heading_text > p{
-    width: 100%;
-  }
-  .heading_background{
-    background-size: 100px;
-  }
-}
+
 #Resume {
   position: relative;
   overflow-x: hidden;
