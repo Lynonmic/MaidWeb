@@ -53,10 +53,17 @@ button {
   background:transparent;
   transition: var(--smooth);
 }
-.navbar_logo img {
-  height: 100px;
-  width: 100px;
-  object-fit: contain;
+.navbar_Logos{
+    background-color: pink;
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    border-radius: 70px;
+    align-items: center;
+}
+.navbar_logo{
+  margin: 6px;
+  transform: translateX(-5px);
 }
 .navbar_links {
   position: initial;
@@ -89,42 +96,71 @@ button {
 .navbar_btn:hover {
   background-color: var(--blue_l);
 }
+@media (min-width:62em)
+{
+  .navbar_links{
+    position: inherit;
+  }
+  .navbar_link > a{
+    width: 45%;
+    padding:5px;
+  }
+  .navbar_btn {
+    width: fit-content;
+  }
+}
 #Introduction {
   position: relative;
-  display:flex;
+  overflow: hidden;
   height: 90vh;  
 }
 .text-port{
-  font-size: 10em;
+  font-size: 6em;
   text-shadow: 0px 200px 0px pink, 0px -200px 0px cyan;
   font-family: Roboto;
   cursor: wait;
 }
 .heading {
+  width: 100%;
+  height: 30vh;
+  font-size: 1.5em;
+  line-height: 1em;
+}
+.heading_background{
   position: absolute;
-  text-align: initial;
-  margin: 0;
   width: 300px;
-  height: 25vh;
-  font-weight: 300;
-  line-height: 2em;
-  transform: translateY(300px);
+  padding: 200px;
+  background-color: lightpink;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 300px;
+  border-radius: 50px;
+  z-index:-300; 
+  transform: translateY(150px) translateX(100px);
 }
-.heading > h1{
-  font-weight: 500;
+.heading_text > p {
+  width: 25%;
 }
-.heading_pic {
-  transform: translateX(475px) translateY(300px);
+.heading:nth-child(even)
+{
+  order: 1;
+  font-weight: 400;
+  transform: translateY(270px) translateX(160px);
 }
-.heading > img{
-  position: absolute;
-  display: flex;
-  max-width: 2000px;
-  width: 1200px;
-  height: auto;
-  transform: translateX(-210px) translateY(-190px);
-  z-index: -100;
-  opacity: 2;
+.heading:nth-child(odd)
+{ 
+  transform: translateX(600px);
+}
+@media (min-width: 62em)
+{
+  .heading{
+    text-align: initial;
+  }
+  .heading_text > p{
+    width: 100%;
+  }
+  .heading_background{
+    background-size: 100px;
+  }
 }
 #Resume {
   position: relative;
@@ -161,8 +197,6 @@ button {
   margin: 0 auto;
   padding-top: 1em;
 }
-
-
 @media (min-width: 62em){
   .ResumeInfo{
     display: flex;
@@ -180,7 +214,7 @@ button {
   }
   .ResumeInfo img{
     width: 50%;
-    padding-bottom: 0;
+    justify-content: center;
   }
   .ResumeInfo:nth-child(odd) img {
     order:2;
