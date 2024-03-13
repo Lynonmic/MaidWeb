@@ -90,7 +90,7 @@ button {
 .navbar_btn{
   color:black;
   font-size: 1rem;
-  margin-left:40px;
+  margin-left:20px;
   border-style:none;
 }
 .navbar_btn:hover {
@@ -150,7 +150,17 @@ button {
 { 
   transform: translateX(600px);
 }
-
+@media (min-width: 62em)
+{
+  .heading {
+    display: flex;
+    justify-content:center;
+    height: auto;
+  }
+  .heading_background{
+    background-image: none;
+  }
+}
 #Resume {
   position: relative;
   overflow-x: hidden;
